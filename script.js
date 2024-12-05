@@ -7,7 +7,7 @@ button.addEventListener("click", () =>{
 	const yearValue = document.getElementById("year").value;
 	if (nameValue && yearValue) {
         // Create query string
-        const queryString = `?name=${nameValue}&year=${yearValue}`;
+        const queryString = `?name=${encodeURIComponent(nameValue)}&year=${encodeURIComponent(yearValue)}`;
         
         // Update h3 element with new URL
         document.getElementById("url").textContent = `https://localhost:8080/${queryString}`;
