@@ -11,5 +11,15 @@ button.addEventListener("click", () =>{
         
         // Update h3 element with new URL
         document.getElementById("url").textContent = `https://localhost:8080/${queryString}`;
-      } 
+    } else if(nameValue){
+		const queryString = `?name=${encodeURIComponent(nameValue)}`;
+        
+        // Update h3 element with new URL
+        document.getElementById("url").textContent = `https://localhost:8080/${queryString}`;
+	} else if(yearValue){
+		const queryString = `?year=${encodeURIComponent(yearValue)}`;
+        
+        // Update h3 element with new URL
+        document.getElementById("url").textContent = `https://localhost:8080/${queryString}`;
+	} 
 });
